@@ -96,7 +96,8 @@ public class InMemoryAssetIndex implements AssetIndex, DataAddressResolver, Asse
             }
 
             // ... then limit
-            return result.skip(querySpec.getOffset()).limit(querySpec.getLimit());
+            //return result.skip(querySpec.getOffset()).limit(querySpec.getLimit());
+            return result;
         } finally {
             lock.readLock().unlock();
         }
